@@ -6,3 +6,37 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+/* universal reset */
+* {
+    /* by default make all the elemnets to have 0 margin and padding */
+    margin: 0;  
+    padding: 0;
+    /* make box-sizing: border-box for all elements by default to mak ethe height or width changes 
+    to affect the entire element including padding and margin */
+    box-sizing: border-box;
+}
+
+/* top level inheritance to make all elements inherit these features by default */
+body {
+    font-family: "lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    /* make each line height to equal 1.7 times of the font size  */
+    line-height: 1.7;
+    color: #777;
+    padding: 30px;
+}
+
+.header {
+    height: 90vh;
+    /* stack background images */
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgb(40, 180, 133, 0.8)),
+    url("../img/hero.jpg");
+    /* make the background image cover the entire element */
+    background-size: cover;
+    /* fix the background image position so that it is fixed while cropping when screen size is reduced */
+    background-position: top;
+    /* clip-path is used to mask the region outside of the specified region thus giving non-rectangular shapes */
+    clip-path: polygon(0 0, 100% 0, 100% 75vh,0 100%);
+}
